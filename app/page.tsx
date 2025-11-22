@@ -45,6 +45,7 @@ const data: {
   ],
 };
 export default function Home() {
+  const sliceData = data.contents.slice(0, 2);
   return (
     <>
       <section className={styles.top}> 
@@ -63,7 +64,7 @@ export default function Home() {
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>news</h2>
         <ul>
-          {data.contents.map((aryicle) => (
+          {sliceData.map((aryicle) => (
             <li key={aryicle.id} className={styles.list}>
               <div className={styles.link}>
                 <Image
